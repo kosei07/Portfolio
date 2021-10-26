@@ -1,4 +1,4 @@
-.App {
+.main-page {
   width: 100vw;
   height: 100vh;
   background-image: url("./image/img6.jpg");
@@ -34,8 +34,18 @@ h1 {
 
 
 .contentL{
-  width: 40%;
+  width: 45%;
   background-color: lightsteelblue;
+}
+
+.contentL > h2{
+  text-align: left;
+  color: rgba(240, 248, 255, 0.822);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -10%;
+  left: 10%;
 }
 
 .contentR {
@@ -72,6 +82,7 @@ h1 {
   height: 33.333%;
   color: aliceblue;
   cursor: pointer;
+  transition: all 400ms 0s ease;
 }
 
 .option > h3{
@@ -147,7 +158,10 @@ h1 {
   margin: 2% 20%;
   color: aliceblue;
 }
-
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
 .products {
   width: 100%;
   display: flex;

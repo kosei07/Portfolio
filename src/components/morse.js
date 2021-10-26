@@ -22,7 +22,7 @@ export default function Cal() {
 
   return (
     <div className="product" onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
-      <a href="https://morse-9f00a.web.app">
+      <a href="https://morse-9f00a.firebaseapp.com">
         <h3>モールス信号</h3>
         <img src={Morse_img} alt="LOGO" />
         <div className="overlay" style={mouseover ? style.visible : style.hidden}>

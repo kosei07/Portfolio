@@ -6,7 +6,14 @@ export default function Instract() {
 
     const [color ,setColor] = useState({backgroundColor:"cadetblue"})
 
+    const [op1, setOp1] = useState(true)
+    const [op2, setOp2] = useState(false)
+    const [op3, setOp3] = useState(false)
 
+    const resize = {
+        big:{height:"40%"},
+        small:{height:"30%"}
+    }
 
     const [text, setText] = useState(
         <ul className="ul_s">
@@ -31,6 +38,10 @@ export default function Instract() {
             </ul>
         )
         setColor({backgroundColor:"cadetblue"})
+
+        setOp1(true)
+        setOp2(false)
+        setOp3(false)
     }
 
 
@@ -41,6 +52,10 @@ export default function Instract() {
             </ul>
         )
         setColor({backgroundColor:"slateblue"})
+
+        setOp1(false)
+        setOp2(true)
+        setOp3(false)
 
     }
 
@@ -55,14 +70,17 @@ export default function Instract() {
         )
         setColor({backgroundColor:"steelblue"})
 
+        setOp1(false)
+        setOp2(false)
+        setOp3(true)
     }
 
     return (
         <div className="instract">
             <div className="options">
-                <div className="option option1"  onMouseOver={option1}><h3>使用できるスキル</h3></div>
-                <div className="option option2"  onMouseOver={option2}><h3>現在学んでいること</h3></div>
-                <div className="option option3"  onMouseOver={option3}><h3>やってみたいこと</h3></div>
+                <div className="option option1"  onMouseOver={option1} style={op1 ? resize.big: resize.small}><h3>使用できるスキル</h3></div>
+                <div className="option option2"  onMouseOver={option2} style={op2 ? resize.big: resize.small}><h3>学んでいること</h3></div>
+                <div className="option option3"  onMouseOver={option3} style={op3 ? resize.big: resize.small}><h3>やってみたいこと</h3></div>
             </div>
             <div className="instract_text" style={color}>
                 <div>
